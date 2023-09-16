@@ -1,0 +1,36 @@
+.data-container{
+    background-color: black;
+    padding: 1rem;
+}
+.category-container{
+    display: flex;
+    gap:0.5rem;
+    width: 100%;
+    border: solid 1px white;
+}
+
+.category{
+    background-color: rgb(4, 125, 85);
+    border-radius: 0.2rem;
+    width: 7rem;
+    height:3rem;
+    color: white;
+}
+.category h4, h6{
+    padding: 0;
+    margin: 0;
+}
+
+.split-table{
+    margin-top: 1.5rem;
+}
+.split-table th{
+    background-color: rgb(93, 93, 247);
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    width:5rem;
+    border:white solid 1px;
+}
+.split-table th p{
+    padding: none;
+    margin: 0;
+}

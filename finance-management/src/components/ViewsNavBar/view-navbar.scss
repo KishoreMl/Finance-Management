@@ -1,4 +1,19 @@
 .view-navbar{
     display:flex;
     align-content: space-around;
+    gap:1rem;
+    background-color: rgb(201, 200, 199);
+    height: 2rem;
+    padding: 0.5rem;
+    
+}
+.view-navbar button{
+    cursor: pointer;
+   color: white;
+   border: none;
+   background-color: rgb(238, 116, 116);
+
+   &:hover{
+    border-bottom: solid 1px red ;
+   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './view-navbar.scss'
 export class ViewNavBar extends Component{
 
     render()
