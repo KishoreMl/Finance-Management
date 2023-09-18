@@ -1,0 +1,54 @@
+@import "../vars.scss";
+
+.right-panel{
+    margin-left: auto;
+    height: 100vh;
+    width:18rem;
+    background-color: rgb(18 19 25);
+}
+.btn-bar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+}
+.btn-bar button{
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    background:transparent;
+    border:none;
+    color: white;
+    cursor: pointer;
+    border-bottom:solid 1px $light-grey ;
+
+    &:hover{
+        background-color: $light-grey;
+    }
+}
+
+.form-container input{
+    border:solid 1px $primary-grey;
+}
+.label {
+    margin-top: 1rem;
+    color: $light-grey;
+}
+.label label{
+    text-align: left;
+    font-size: 0.8rem;
+    padding-left: 1.5rem;
+}
+.input-div input, select{
+    background-color: $primary-black;
+    color: white;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    height: 1.6rem;
+    width:75%;
+    cursor: pointer;
+}
+
+.btn-div{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}

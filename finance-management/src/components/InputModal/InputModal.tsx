@@ -14,25 +14,10 @@ export class InputModal extends Component<{},InputModalProperties>{
     }
     render() {
         return (
-            <div className="input-modal">
-                <div className="btn-group">
-            	    <button>Income</button>
-                    <button>Expense</button>
-                    <button>Investment</button>
+            <div className="overlay">
+                <div className="modal-container">
+                    
                 </div>
-                
-                <form>
-                   
-                    <input type="date" name="date"></input><br />
-                    <input type="text" name="type"></input><br />
-                    <select id="category" name="category">
-                        {this.state.categories.map((category) => (
-                            <option value={category}>{category}</option>
-                    ))}
-                    </select><br />
-                    <input type="text" name="amount"></input><br />
-                    <input type="text" name="description"></input>
-                </form>
             </div>
         )
     }

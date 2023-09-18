@@ -1,0 +1,21 @@
+@import "./vars.scss";
+
+.green{
+    background-color: greenyellow;
+}
+.btn-primary, .btn-outline{
+    color: white;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    
+}
+.btn-primary{
+    background:$primary-red;  
+    border: none;
+    
+}
+.btn-outline{
+    background: transparent;
+    border: solid 1px $primary-red;
+   
+}

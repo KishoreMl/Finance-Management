@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './DataTable.scss';
+import '../global.scss';
 
 interface DataTableProperties{
     categories:string[]
@@ -20,7 +21,19 @@ export class DataTable extends Component<{},DataTableProperties>{
                 <div className="category-container">
                     <div className="category">
                         <h4>Total Income</h4>
-                        <h6>1,00,00</h6>
+                        <h5>1,00,00</h5>
+                    </div>
+                    <div className="category">
+                        <h4>Savings</h4>
+                        <h5>1,00,00</h5>
+                    </div>
+                    <div className="category">
+                        <h4>Expense</h4>
+                        <h5>1,00,00</h5>
+                    </div>
+                    <div className="category">
+                        <h4>Investment</h4>
+                        <h5>1,00,00</h5>
                     </div>
                 </div>
 
@@ -30,6 +43,37 @@ export class DataTable extends Component<{},DataTableProperties>{
                         <th><p>Expected</p></th>
                         <th><p>Actual</p></th>
                     </tr>
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+                    <tr>
+                        <td><p>Food</p></td>
+                        <td><p>2000</p></td>
+                        <td className="green"><p>1000</p></td>
+                    </tr> 
+
                 </div>
             </div>  
         );
