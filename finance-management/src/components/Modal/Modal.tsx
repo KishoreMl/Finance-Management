@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import "./modal.scss";
 
 interface ModalProperties{
-   
+    header: string; 
+    modalContent: string;
+    secondaryButton: string; 
+    primaryButton:string
 }
-export class Modal extends Component<{},InputModalProperties>{
+export class Modal extends Component<ModalProperties>{
     constructor(props)
     {
         super(props);    
@@ -15,18 +18,23 @@ export class Modal extends Component<{},InputModalProperties>{
                 <div className="overlay">
                     <div className="modal-container">
                         <div className="modal-header">
-                            <h1>Modal Heading</h1>
+                            <h1>{this.props.header}</h1>
                         </div>
                         <div className="modal-content">
-                            <p>Modal Content</p>
+                            <p>{this.props.modalContent}</p>
                         </div>
                         <div className="modal-btn-container">
-                            <button className="btn-primary-blue" id="primary-button">
-                                OK
-                            </button>
-                            <button className="btn-primary-blue" id="secondary-button">
-                                Cancel
-                            </button>
+                            {this.props.primaryButton &&
+                                <button className="btn-primary-blue" id="primary-button">
+                                    {this.props.primaryButton}
+                                </button>
+                            }
+                            {this.props.secondaryButton &&
+                                <button className="btn-primary-blue" id="secondary-button">
+                                   {this.props.secondaryButton}
+                                </button>
+                            }
+                            
                         </div>
                     </div>
                 </div>
