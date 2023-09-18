@@ -45,7 +45,7 @@ export class RightPanel extends Component{
 
 
                     <div className="btn-div">
-                        <button className="btn-primary">Save</button>
+                        <button className="btn-primary-red">Save</button>
                         <button className="btn-outline">Cancel</button>
                     </div>
                 </div>
