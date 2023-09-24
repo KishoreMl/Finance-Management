@@ -1,17 +1,24 @@
 import React, {Component} from "react";
 import './RightPanel.scss';
-
-export class RightPanel extends Component{
+interface RightPanelProperties{
+    formType: string;
+}
+export class RightPanel extends Component<{},RightPanelProperties>{
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            formType:"Income",
+        }
+    }
+    
     render()
     {
-        return (
-            <div className="right-panel">
-                <div className="btn-bar">
-                    <button>Income</button>
-                    <button>Expense</button>
-                    <button>Investment</button>
-                </div>
-                <div className="form-container">
+        const IncomeForm = <div className="form-container">
+
+        </div>;
+
+        const ExpenseForm = <div className="form-container">
                     <div className="label">
                         <label htmlFor="category">Date</label>
                     </div>
@@ -48,7 +55,21 @@ export class RightPanel extends Component{
                         <button className="btn-primary-red">Save</button>
                         <button className="btn-outline">Cancel</button>
                     </div>
+                </div>;
+        
+        const InvestmentForm = <div className="form-container">
+
+        </div>;
+
+        return (
+            <div className="right-panel">
+                <div className="btn-bar">
+                    <button>Income</button>
+                    <button>Expense</button>
+                    <button>Investment</button>
                 </div>
+                {this.state.formType==="Income"?IncomeForm:this.state.formType==="Expense"?ExpenseForm:InvestmentForm}
+                
             </div>
         )
     }
