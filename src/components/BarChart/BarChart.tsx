@@ -1,4 +1,5 @@
 import React from 'react';
+import { AgCharts } from "ag-charts-react";
 import './BarChart.scss';
 
 interface BarChartProps{
