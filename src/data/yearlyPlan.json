@@ -1,0 +1,29 @@
+{
+    "categories":[
+        {
+            "name":"Rent",
+            "limit":10000,
+            "spent":6000
+        },
+        {
+            "name":"Food",
+            "limit":10000,
+            "spent":6000
+        },
+        {
+            "name":"Transport",
+            "limit":10000,
+            "spent":6000
+        },
+        {
+            "name":"Clothing",
+            "limit":10000,
+            "spent":6000
+        },
+        {
+            "name":"Grooming",
+            "limit":10000,
+            "spent":6000
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import './RightPanel.scss';
 interface RightPanelProperties{
     formType: string;
 }
-export class RightPanel extends Component<{},RightPanelProperties>{
+class RightPanel extends Component<{},RightPanelProperties>{
     constructor(props)
     {
         super(props);
@@ -49,8 +49,6 @@ export class RightPanel extends Component<{},RightPanelProperties>{
                     <div className="input-div">
                         <input type="text" name="category" id="category"/>
                     </div>
-
-
                     <div className="btn-div">
                         <button className="btn-primary-red">Save</button>
                         <button className="btn-outline">Cancel</button>
@@ -63,14 +61,11 @@ export class RightPanel extends Component<{},RightPanelProperties>{
 
         return (
             <div className="right-panel">
-                <div className="btn-bar">
-                    <button>Income</button>
-                    <button>Expense</button>
-                    <button>Investment</button>
-                </div>
-                {this.state.formType==="Income"?IncomeForm:this.state.formType==="Expense"?ExpenseForm:InvestmentForm}
+               
                 
             </div>
         )
     }
 }
+
+export default RightPanel;
