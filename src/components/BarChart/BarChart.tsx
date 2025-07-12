@@ -1,33 +1,34 @@
-import React from 'react';
+import React, { useState } from "react";
 import { AgCharts } from "ag-charts-react";
-import './BarChart.scss';
+import { getData } from "./BarChartUtils.ts";
+import { AgBarSeriesOptions } from "ag-charts-community";
+
 
 interface BarChartProps{
- totalValue: number;
- currentValue: number;
+    title: string;
+    subtitle?: string;
 }
 
-class BarChart extends React.Component<BarChartProps> {
+const BarChart = ({ title, subtitle }: BarChartProps) => {
+  const [options, setOptions] = useState({
+    title: {
+      text: title,
+    },
+    subtitle: {
+      text: subtitle || "",
+    },
+    data: getData(),
+    series: [
+      {
+        type: "bar",
+        xKey: "month",
+        yKey: "amount",
+        yName: "Amount",
+      } as AgBarSeriesOptions,
+    ],
+  });
 
-    public calculatePercentage = (totalValue: number, currentValue: number): number => {
-        if (totalValue === 0) return 0;
-        return (currentValue / totalValue) * 100;
-    }
-    render(){
-        return (
-            <div className='bar-chart-wrapper'>
-                <div className="bar-chart-container">
-                    <div className='bar-chart-content' style={{width:this.calculatePercentage(this.props.totalValue,this.props.currentValue)+"%"}}></div>
-                </div>
-                <div className='bar-chart-footer'>
-                 <div className='footer-left'>{this.props.totalValue}</div>
-                 <div className='footer-right'>{this.props.currentValue}</div>
-                </div>
-            </div>
-        );
-    }
-
-}
-
+  return <AgCharts options={options} />;
+};
 
 export default BarChart;
