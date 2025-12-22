@@ -2,6 +2,7 @@ import React from 'react';
 import BarChart from "../BarChart/BarChart.tsx";
 import YearlyPlanData from "../../data/yearlyPlan.json";
 import './BarChartPanel.scss';
+import '../../components/global.scss';
 
 class BarChartPanel extends React.Component {
 
@@ -15,7 +16,7 @@ class BarChartPanel extends React.Component {
                 </div>
                 <div className="bar-chart-panel-content">
                     {YearlyPlanData.categories.map((item, index) => (
-                        <div className="flex">
+                        <div className="graph-container">
                             <div>{item.name} </div>
                             <BarChart key={index} totalValue={item.limit} currentValue={item.spent} />
                         </div>

@@ -1,8 +1,76 @@
-# Getting Started with Create React App
+# Finance Management Dashboard 📊
+
+A modern, responsive finance management dashboard built with React and TypeScript. Features a comprehensive analytics interface with interactive charts and customizable filters.
+
+![Dashboard Preview](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue) ![SASS](https://img.shields.io/badge/SASS-1.66.1-pink)
+
+## ✨ Features
+
+- **📱 Fully Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **📊 Multiple Chart Types** - Pie, Line, Bar, and Area charts for comprehensive data visualization
+- **🎯 KPI Dashboard** - Quick overview of key metrics (Revenue, Cost, Sales)
+- **🔍 Interactive Filters** - Filter by store location, size, and product categories
+- **🎨 Modern UI** - Clean, card-based design with smooth animations
+- **♿ Accessible** - Built with accessibility in mind (ARIA labels, keyboard navigation)
+- **⚡ Fast Performance** - Optimized React components with efficient rendering
+
+## 🚀 Quick Start
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Installation
+
+```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate to project directory
+cd Finance-Management
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+src/
+├── pages/
+│   └── Home/                    # Main page combining all components
+├── components/
+│   ├── LeftPanel/              # Filter sidebar
+│   ├── Dashboard/              # Main dashboard container
+│   ├── KPICards/               # Key Performance Indicator cards
+│   ├── PieChart/               # Product category breakdown
+│   ├── LineGraph/              # Trend analysis
+│   ├── BarChart/               # Monthly comparisons
+│   └── AreaGraph/              # Cumulative data visualization
+└── App.tsx                      # Root component
+```
+
+For detailed structure documentation, see [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+
+## 🎨 UI Components
+
+### LeftPanel (Filter Sidebar)
+- Store location filters (Astoria, Hell's Kitchen, Lower Manhattan)
+- Size filters (Large, Regular, Small)
+- Product category filters (Coffee, Tea, Bakery, etc.)
+- Mobile-responsive with slide-in drawer
+
+### Dashboard
+- **KPI Cards**: Total Revenue (£699K), Avg Cost Per Unit (£3), Total Sales (149K)
+- **Revenue by Product Category**: Interactive pie chart
+- **Product & Price**: Line graph showing trends
+- **Monthly Revenue**: Bar chart for period comparisons
+- **Revenue Breakdown**: Area chart for cumulative analysis
+
+## 💻 Available Scripts
 
 In the project directory, you can run:
 
@@ -68,3 +136,71 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: > 1024px - Full sidebar with 2-column chart grid
+- **Tablet**: 768px - 1024px - Reduced sidebar with single column
+- **Mobile**: < 768px - Slide-in drawer menu with stacked layout
+
+## 🎯 Key Technologies
+
+- **React 18.2.0** - Modern React with Hooks
+- **TypeScript** - Type-safe code
+- **SASS/SCSS** - Advanced styling with variables and nesting
+- **AG Charts** - Professional charting library
+- **CSS Grid & Flexbox** - Responsive layouts
+
+## 🔧 Customization
+
+### Adding New Filters
+
+Edit `src/components/LeftPanel/LeftPanel.tsx`:
+
+```typescript
+const newFilterOptions = ['Option 1', 'Option 2', 'Option 3'];
+```
+
+### Modifying KPI Cards
+
+Edit `src/components/KPICards/KPICards.tsx`:
+
+```typescript
+<KPICard 
+  title="Your Metric" 
+  value="£999K" 
+  icon="📈" 
+/>
+```
+
+### Updating Chart Data
+
+Pass data to chart components:
+
+```typescript
+<BarChart title="Custom Title" data={yourData} />
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Charts not displaying**: Ensure all dependencies are installed (`npm install`)
+2. **Styles not applying**: SASS must be installed and configured
+3. **Mobile menu not working**: Check that JavaScript is enabled in your browser
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 👨‍💻 Author
+
+Your Name
+
+---
+
+**Built with ❤️ using React and TypeScript**

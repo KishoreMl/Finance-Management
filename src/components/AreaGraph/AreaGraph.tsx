@@ -7,7 +7,7 @@ interface AreaGraphProps{
     title: string;
 }
 
-const AreaGraph = ({ title   }: AreaGraphProps) => {
+const AreaGraph = ({ title }: AreaGraphProps) => {
   const [options, setOptions] = useState({
     title: {
       text: title,

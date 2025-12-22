@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AgCharts } from "ag-charts-react";
 import { getData } from "./BarChartUtils.ts";
 import { AgBarSeriesOptions } from "ag-charts-community";
+import '../../components/global.scss';
 
 
 interface BarChartProps{
@@ -17,6 +18,9 @@ const BarChart = ({ title, subtitle }: BarChartProps) => {
     subtitle: {
       text: subtitle || "",
     },
+    background: {
+      fill: "rgb(250, 247, 235)",
+    },
     data: getData(),
     series: [
       {
@@ -28,7 +32,11 @@ const BarChart = ({ title, subtitle }: BarChartProps) => {
     ],
   });
 
-  return <AgCharts options={options} />;
+  return (
+      <div className="graph-container">
+        <AgCharts options={options} />
+      </div>
+    );
 };
 
 export default BarChart;

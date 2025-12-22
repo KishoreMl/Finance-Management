@@ -28,15 +28,15 @@ export function getData() {
       },
       {
         month: "July",
-        amount: 15482,
+        amount: 23608,
       },
       {
         month: "August",
-        amount: 0,
+        amount: 24327,
       },
       {
         month: "September",
-        amount: 0,
+        amount: 24359,
       },
       {
         month: "October",
