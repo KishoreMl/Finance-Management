@@ -1,206 +1,151 @@
-# Finance Management Dashboard 📊
+# Finance Management Dashboard
 
-A modern, responsive finance management dashboard built with React and TypeScript. Features a comprehensive analytics interface with interactive charts and customizable filters.
+A modern, responsive finance management dashboard built with React and TypeScript. Features an analytics interface with interactive charts, KPI metrics, and a filterable sidebar.
 
-![Dashboard Preview](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue) ![SASS](https://img.shields.io/badge/SASS-1.66.1-pink)
+![React](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue) ![SASS](https://img.shields.io/badge/SASS-1.66.1-pink) ![AG Charts](https://img.shields.io/badge/AG_Charts-12.0.1-orange)
 
-## ✨ Features
+## Features
 
-- **📱 Fully Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- **📊 Multiple Chart Types** - Pie, Line, Bar, and Area charts for comprehensive data visualization
-- **🎯 KPI Dashboard** - Quick overview of key metrics (Revenue, Cost, Sales)
-- **🔍 Interactive Filters** - Filter by store location, size, and product categories
-- **🎨 Modern UI** - Clean, card-based design with smooth animations
-- **♿ Accessible** - Built with accessibility in mind (ARIA labels, keyboard navigation)
-- **⚡ Fast Performance** - Optimized React components with efficient rendering
+- **Responsive Design** — Seamlessly adapts across desktop, tablet, and mobile viewports
+- **Multiple Chart Types** — Pie, Line, Bar, and Area charts powered by AG Charts
+- **KPI Cards** — At-a-glance metrics for Revenue, Cost Per Unit, and Total Sales
+- **Interactive Filters** — Sidebar filters for store location, product size, and category
+- **Modern UI** — Card-based layout with smooth hover animations and transitions
+- **Accessible** — ARIA labels and keyboard-navigable components throughout
 
-## 🚀 Quick Start
+## Quick Start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Prerequisites
+
+- Node.js 16+
+- npm 8+
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone <your-repo-url>
-
-# Navigate to project directory
 cd Finance-Management
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm start
 ```
 
-The app will open at [http://localhost:3000](http://localhost:3000)
+The app opens at [http://localhost:3000](http://localhost:3000).
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
 ├── pages/
-│   └── Home/                    # Main page combining all components
+│   └── Home/                    # Root page — composes LeftPanel + Dashboard
 ├── components/
-│   ├── LeftPanel/              # Filter sidebar
-│   ├── Dashboard/              # Main dashboard container
-│   ├── KPICards/               # Key Performance Indicator cards
-│   ├── PieChart/               # Product category breakdown
-│   ├── LineGraph/              # Trend analysis
-│   ├── BarChart/               # Monthly comparisons
-│   └── AreaGraph/              # Cumulative data visualization
-└── App.tsx                      # Root component
+│   ├── LeftPanel/               # Filter sidebar (store, size, product filters)
+│   ├── Dashboard/               # Main content area with KPI cards and charts
+│   ├── KPICards/                # Revenue, cost, and sales summary cards
+│   ├── PieChart/                # Revenue by product category (pie)
+│   ├── LineGraph/               # Product & price trends (line)
+│   ├── BarChart/                # Monthly expense (bar)
+│   ├── AreaGraph/               # Revenue breakdown (area)
+│   ├── BarChartPanel/           # Standalone bar chart panel component
+│   ├── ChartComponent/          # Generic reusable chart wrapper
+│   ├── DataTable/               # Tabular transaction data view
+│   ├── Header/                  # Page header with app title
+│   ├── NavBar/                  # Top navigation bar
+│   ├── ViewsNavBar/             # View-switching navigation
+│   ├── RightPanel/              # Data entry panel (income/expense/investment forms)
+│   ├── LoadingSpinner/          # Animated loading indicator (sm/md/lg variants)
+│   └── Modal/                   # Modal dialog component
+├── data/
+│   └── tradingProfits.json      # Sample trading profit dataset
+└── App.tsx                      # Application root
 ```
 
-For detailed structure documentation, see [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+## UI Layout
 
-## 🎨 UI Components
-
-### LeftPanel (Filter Sidebar)
-- Store location filters (Astoria, Hell's Kitchen, Lower Manhattan)
-- Size filters (Large, Regular, Small)
-- Product category filters (Coffee, Tea, Bakery, etc.)
-- Mobile-responsive with slide-in drawer
-
-### Dashboard
-- **KPI Cards**: Total Revenue (£699K), Avg Cost Per Unit (£3), Total Sales (149K)
-- **Revenue by Product Category**: Interactive pie chart
-- **Product & Price**: Line graph showing trends
-- **Monthly Revenue**: Bar chart for period comparisons
-- **Revenue Breakdown**: Area chart for cumulative analysis
-
-## 💻 Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: > 1024px - Full sidebar with 2-column chart grid
-- **Tablet**: 768px - 1024px - Reduced sidebar with single column
-- **Mobile**: < 768px - Slide-in drawer menu with stacked layout
-
-## 🎯 Key Technologies
-
-- **React 18.2.0** - Modern React with Hooks
-- **TypeScript** - Type-safe code
-- **SASS/SCSS** - Advanced styling with variables and nesting
-- **AG Charts** - Professional charting library
-- **CSS Grid & Flexbox** - Responsive layouts
-
-## 🔧 Customization
-
-### Adding New Filters
-
-Edit `src/components/LeftPanel/LeftPanel.tsx`:
-
-```typescript
-const newFilterOptions = ['Option 1', 'Option 2', 'Option 3'];
+```
+┌─────────────────────────────────────────────────────────┐
+│                        HOME PAGE                         │
+├──────────────┬──────────────────────────────────────────┤
+│              │                                           │
+│  LEFT PANEL  │              DASHBOARD                    │
+│              │                                           │
+│  Store       │  ┌───────────────────────────────────┐   │
+│  Location    │  │  KPI CARDS (Revenue / Cost / Sales)│   │
+│              │  └───────────────────────────────────┘   │
+│  Size        │                                           │
+│              │  ┌────────────┐    ┌────────────────┐    │
+│  Products    │  │  Pie Chart │    │   Line Graph   │    │
+│              │  └────────────┘    └────────────────┘    │
+│              │                                           │
+│              │  ┌─────────────────────────────────────┐ │
+│              │  │       Bar Chart (2 columns)          │ │
+│              │  └─────────────────────────────────────┘ │
+│              │                                           │
+│              │  ┌─────────────────────────────────────┐ │
+│              │  │       Area Graph (2 columns)         │ │
+│              │  └─────────────────────────────────────┘ │
+└──────────────┴──────────────────────────────────────────┘
 ```
 
-### Modifying KPI Cards
+## Responsive Breakpoints
 
-Edit `src/components/KPICards/KPICards.tsx`:
+| Breakpoint | Width      | Sidebar              | Chart Layout |
+|------------|------------|----------------------|--------------|
+| Desktop    | > 1024px   | 240px fixed          | 2-column grid |
+| Tablet     | 768–1024px | 200px reduced        | Single column |
+| Mobile     | < 768px    | Slide-in drawer      | Stacked       |
 
-```typescript
-<KPICard 
-  title="Your Metric" 
-  value="£999K" 
-  icon="📈" 
-/>
-```
+On mobile, a hamburger button toggles a slide-in sidebar with a dark overlay backdrop.
 
-### Updating Chart Data
+## Key Technologies
 
-Pass data to chart components:
+| Technology | Version | Purpose |
+|---|---|---|
+| React | 18.2.0 | UI framework with Hooks |
+| TypeScript | — | Type-safe component development |
+| SASS/SCSS | 1.66.1 | Variables, nesting, and mixins |
+| AG Charts | 12.0.1 | Interactive charting library |
+| CSS Grid & Flexbox | — | Responsive layouts |
 
-```typescript
-<BarChart title="Custom Title" data={yourData} />
-```
+## Available Scripts
 
-## 🐛 Troubleshooting
+| Command | Description |
+|---|---|
+| `npm start` | Start development server at localhost:3000 |
+| `npm test` | Run tests in interactive watch mode |
+| `npm run build` | Create optimised production build in `/build` |
+| `npm run eject` | Eject from Create React App (irreversible) |
 
-### Common Issues
+## Sample Data
 
-1. **Charts not displaying**: Ensure all dependencies are installed (`npm install`)
-2. **Styles not applying**: SASS must be installed and configured
-3. **Mobile menu not working**: Check that JavaScript is enabled in your browser
+The dashboard uses a coffee shop dataset (`src/data/tradingProfits.json`) spanning three New York locations:
 
-## 📝 License
+- **Astoria**
+- **Hell's Kitchen**
+- **Lower Manhattan**
+
+KPI summary values: **£699K** total revenue · **£3** avg cost per unit · **149K** total sales
+
+Product categories: Branded, Coffee, Coffee Beans, Drinking Chocolate, Flavours, Loose Tea, Packaged Chocolate, Tea
+
+## Documentation
+
+Extended documentation lives in the [`docs/`](./docs/) folder:
+
+- [`docs/IMPLEMENTATION_SUMMARY.md`](./docs/IMPLEMENTATION_SUMMARY.md) — What was built and design decisions
+- [`docs/USAGE_EXAMPLES.md`](./docs/USAGE_EXAMPLES.md) — Code examples for customising components
+
+## Troubleshooting
+
+| Issue | Fix |
+|---|---|
+| Charts not rendering | Run `npm install` to ensure all dependencies are present |
+| Styles missing | Confirm `sass` is installed (`npm install sass`) |
+| Mobile menu unresponsive | Verify JavaScript is enabled in the browser |
+
+### Author
+
+Kishore ML
+
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-## 👨‍💻 Author
-
-Your Name
-
----
-
-**Built with ❤️ using React and TypeScript**

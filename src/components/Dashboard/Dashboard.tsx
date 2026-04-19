@@ -30,8 +30,8 @@ const Dashboard: React.FC = () => {
 
                 <div className="chart-item chart-bar">
                     <div className="chart-wrapper">
-                        <h3 className="chart-title">Monthly Revenue</h3>
-                        <BarChart title='Monthly Revenue' />
+                        <h3 className="chart-title">Monthly Expense</h3>
+                        <BarChart title='Monthly Expense' />
                     </div>
                 </div>
 
